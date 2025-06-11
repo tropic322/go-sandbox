@@ -9,7 +9,7 @@ import (
 
 func main() {
 	reader := bufio.NewScanner(os.Stdin)
-	fmt.Println("Введите числа: ")
+	fmt.Print("Введите числа: ")
 	reader.Scan()
 	input := reader.Text()
 
@@ -17,4 +17,6 @@ func main() {
 	fmt.Println("Массив, который был вычитан: ", numbers)
 	NG.SortNumbers(numbers)
 	fmt.Println("Отсортированные элементы: ", numbers)
+	fmt.Println("Самое большое число: ", numbers[0])
+	fmt.Println("Самое маленькое число: ", numbers[len(numbers)-1])
 }
