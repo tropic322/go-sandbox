@@ -19,4 +19,5 @@ func main() {
 	fmt.Println("Отсортированные элементы: ", numbers)
 	fmt.Println("Самое большое число: ", numbers[0])
 	fmt.Println("Самое маленькое число: ", numbers[len(numbers)-1])
+	fmt.Println("Среднее-арифметическое: ", NG.GetAverage(numbers))
 }

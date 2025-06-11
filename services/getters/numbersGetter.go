@@ -39,3 +39,12 @@ func SortNumbers(numbers []int) {
 		}
 	}
 }
+
+func GetAverage(numbers []int) int {
+	n := len(numbers)
+	var sum int
+	for i := 0; i < n; i++ {
+		sum += numbers[i]
+	}
+	return sum / n
+}
