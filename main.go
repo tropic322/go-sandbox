@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	NG "task-1/services/getters"
+	NG "task-1/src/services/getters"
 )
 
 func main() {

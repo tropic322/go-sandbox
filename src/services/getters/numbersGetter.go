@@ -6,7 +6,7 @@ import (
 )
 
 func GetNumbers(inputString string) []int {
-	// Убираем все разделители кроме цифр
+
 	cleaned := strings.Map(func(r rune) rune {
 		if r == ',' {
 			return ' '
