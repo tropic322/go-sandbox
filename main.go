@@ -4,36 +4,26 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strconv"
-	"strings"
+	bracketService "task-1/services/bracket"
+	stringService "task-1/services/string"
 )
 
 func main() {
 	reader := bufio.NewScanner(os.Stdin)
-	fmt.Print("Ведите числа: ")
+	fmt.Print("Ведите номер задания: ")
 	reader.Scan()
 	input := reader.Text()
 
-	// Убираем все разделители кроме цифр
-	cleaned := strings.Map(func(r rune) rune {
-		if r == ',' {
-			return ' '
-		}
-		if r >= '0' && r <= '9' || r == ' ' {
-			return r
-		}
-		return -1
-	}, input)
-
-	parts := strings.Fields(cleaned)
-
-	var numbers []int
-	for _, part := range parts {
-		num, err := strconv.Atoi(part)
-		if err == nil {
-			numbers = append(numbers, num)
-		}
+	switch input {
+	case "1":
+		stringService.GetInputStringLength()
+	case "2":
+		stringService.GetVowelLetters()
+	case "3":
+		stringService.Capitalize()
+	case "4":
+		bracketService.CheckBrackets()
+	default:
+		fmt.Println("Введенное число не соответствует номеру ни одного задания")
 	}
-
-	fmt.Println(numbers)
 }
