@@ -21,6 +21,8 @@ func CheckBrackets() {
 	rightBracketsAmount := len(reRight.FindAllString(input, -1))
 
 	if leftBracketsAmount != rightBracketsAmount {
-		fmt.Printf("вывод: Скобки расставлены неправильно, %v открывающиеся, %v закрывающиеся", leftBracketsAmount, rightBracketsAmount)
+		fmt.Printf("Скобки расставлены неправильно, %v открывающиеся, %v закрывающиеся", leftBracketsAmount, rightBracketsAmount)
+	} else {
+		fmt.Printf("Скобки расставлены верно, %v открывающиеся, %v закрывающиеся", leftBracketsAmount, rightBracketsAmount)
 	}
 }
